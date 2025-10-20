@@ -1,0 +1,208 @@
+  <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us | Luxopay.com</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Hide checkbox */
+    #check { display: none; }
+
+    /* Hide close icon by default */
+    .closebtn { display: none; }
+
+    /* Mobile nav menu hidden */
+    .nav-links {
+      display: none;
+    }
+
+    /* When checked, show mobile menu */
+    #check:checked ~ .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: #071823;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      width: 200px;
+      z-index: 50;
+    }
+     
+    #heading{
+        position: relative;
+        top: -50px;
+        visibility: hidden;
+        animation: headingAnime 0.9s linear 1s 1 normal forwards;
+        text-decoration: underline;
+        text-underline-offset: 20px;
+
+    }
+     @keyframes headingAnime {
+        from{
+            top: -50px;
+        }
+        to{
+            top: 0px;
+            visibility: visible;
+        }
+     }
+
+     #input1{
+         transform: translateX(-400px);
+         visibility: hidden;
+         animation: input1Anime 1s ease-in 0s 1 normal forwards;
+     }
+     @keyframes input1Anime {
+        from{
+            transform: translateX(-400px);
+        }
+        to{
+            transform: translateX(0px);
+            visibility: visible;
+        }
+     }
+      #input2{
+         transform: translateX(400px);
+         visibility: hidden;
+         animation: input2Anime 1s ease-in 0s 1 normal forwards;
+     }
+     @keyframes input2Anime{
+        from{
+            transform: translateX(400px);
+        }
+        to{
+            transform: translateX(0px);
+            visibility: visible;
+        }
+     }
+      #input3{
+         transform: translateY(300px);
+         visibility: hidden;
+         animation: input3Anime 1s ease-in 0s 1 normal forwards;
+     }
+     @keyframes input3Anime {
+        from{
+            transform: translateY(300px);
+        }
+        to{
+            transform: translateY(0px);
+            visibility: visible;
+        }
+     }
+     #animebtn{
+         transform: translateX(400px);
+         visibility: hidden;
+         animation: btnAnime 1s ease-in 0s 1 normal forwards;
+     }
+     @keyframes btnAnime {
+        from{
+            transform: translateX(400px);
+        }
+        to{
+            transform: translateX(0px);
+            visibility: visible;
+        }
+    }
+     footer h3{
+        font-size: large;
+    }
+    footer a{
+        color: rgb(163, 156, 156);
+        
+    } 
+
+    /* When checked, show close button and hide bars */
+    #check:checked ~ .togglebtn { display: none; }
+    #check:checked ~ .closebtn { display: block; }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-cyan-900 to-black text-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 relative bg-black">
+    <div class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-gradient-to-r from-yellow-500 to-yellow-700 rounded-md flex items-center justify-center font-bold text-black">L</div>
+      <div>
+        <div class="font-bold text-lg">LUXOPAY</div>
+        <div class="text-xs text-gray-400">Future of banking</div>
+      </div>
+    </div>
+
+    <!-- Toggle Checkbox -->
+    <input type="checkbox" id="check">
+
+    <!-- Hamburger Icon -->
+    <div class="togglebtn text-2xl text-white cursor-pointer md:hidden">
+      <label for="check"><i class="fa-solid fa-bars"></i></label>
+    </div>
+
+    <!-- Close Icon -->
+    <div class="closebtn text-2xl text-white cursor-pointer md:hidden">
+      <label for="check"><i class="fa-solid fa-close"></i></label>
+    </div>
+
+    <!-- Nav Links -->
+    <div class="nav-links hidden md:flex md:flex-row items-center gap-6 mt-4 md:mt-0">
+       <a href="./luxopayhome.html" class="text-gray-300 hover:text-white">Home</a>
+      <a href="./luxopayServices.html" class="text-gray-300 hover:text-white">Services</a>
+      <a href="./luxopayAbout.html" class="text-gray-300 hover:text-white">About us</a>
+       <a href="./luxopayContact.html" class="text-gray-300 hover:text-white">Contact us</a>
+        <a href="./luxopaytable.html" class="text-gray-300 hover:text-white">Fees</a>
+      <a href="#" class="bg-gradient-to-r from-yellow-500 to-yellow-700 text-black px-4 py-2 rounded-lg font-semibold">Get the App</a>
+    </div>
+  </nav>
+
+     <main class="flex flex-col gap-3 justify-center items-center">
+        <div>
+        <h1 class="text-yellow-600 text-4xl m-10 underline" id="heading">Contact US</h1>
+        </div>
+        <div class="flex flex-col gap-4">
+         <input type="text" placeholder="Name" class="py-3 px-6 border border-white rounded-lg bg-transparent sm:w-[500px] " id="input1">
+         <input type="text" placeholder="Email" class="py-3 px-6 border border-white rounded-lg bg-transparent  sm:w-[500px]" id="input2">
+         <textarea name="description" placeholder="Description..." class="py-3 px-6 border border-white rounded-lg bg-transparent  sm:w-[500px] sm:h-[200px]" id="input3"></textarea>
+         </div>
+         <button type="submit" class="text-center bg-gradient-to-r from-yellow-500 to-yellow-700 text-white sm:w-[500px] py-3 px-6 rounded-lg leading-tight font-semibold text-lg" id="animebtn">Submit</button>
+     </main>
+
+     <!-- footer -->
+       <footer class="flex md:gap-40 p-5 bg-gray-800 mt-10 flex-wrap gap-20 justify-center w-full
+       sticky">
+        <!-- <footer class="fixed bottom-0 left-0 w-full flex flex-wrap gap-20 justify-center md:gap-40 p-5 bg-gray-800"> -->
+        <div class="flex flex-col gap-2">
+            <h3>Luxopay</h3>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About US</a>
+            <a href="#">Fees</a>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <h3>Terms and Conditions</h3>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Condition</a>
+        </div>
+        <div class="flex flex-col gap-2">
+            <h3>Constumer Support</h3>
+            <a href="#">Luxopay**gmail.com</a>
+            <a href="#">+101 3445 9**02</a>
+        </div>
+        <div class="flex flex-col gap-3">
+            <h3>Follow Us On</h3>
+            <div class="flex gap-4">
+            <a href="https://www.instagram.com" target="_blank"><img width="28" height="28" src="https://img.icons8.com/3d-fluency/94/instagram-logo.png" alt="instagram-logo"/></a>
+            <a href="https://www.facebook.com" target="_blank"><img width="28" height="28" src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new"/></a>
+            <a href="https://www.x.com" target="_blank"><img width="28" height="28" src="https://img.icons8.com/color/48/twitterx.png" alt="twitterx"/></a>
+            </div>
+            
+        </div>
+
+    </footer>
+
+    </body>
+    </html>
